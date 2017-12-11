@@ -1,0 +1,37 @@
+#+TITLE: README
+
+
+* OMDB Wrapper for Clojure
+
+A simple wrapper to access the OMDb API. There is one function: ~search~ and
+it returns map with ~:keywords~.
+
+
+** Usage
+
+The ~search~ function four parameters: ~search-by~, ~search-term~, ~api-key~ and
+~options-map~.
+
+|---------------+--------------------------------------|
+| Parameters    | Options                              |
+|---------------+--------------------------------------|
+| ~search-by~   | String: title, id, term              |
+| ~search-term~ | String: movie, id, term              |
+| ~api-key~     | String: api-key provided by OMDb     |
+| ~options-map~ | Map: various options can be found on |
+|               | the OMDb site. See example below.    |
+|---------------+--------------------------------------|
+
+*** Example
+    #+BEGIN_SRC clojure
+      (ns great-app.core
+        (:require '[omdb-wrapper.core :as omdb]))
+
+      (def api-key "xyz1234")
+
+      ;;; No options.
+      (omdb/search "title" "Casablanca" api-key {})
+
+      ;;; With options.
+      (omdb/search "title" "Casablanca" api-key {:plot "full"})
+    #+END_SRC
