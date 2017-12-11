@@ -9,15 +9,14 @@ it returns map with ~:keywords~.
 The ~search~ function four parameters: ~search-by~, ~search-term~, ~api-key~ and
 ~options-map~.
 
-|---------------+--------------------------------------|
-| Parameters    | Options                              |
-|---------------+--------------------------------------|
-| ~search-by~   | String: title, id, term              |
-| ~search-term~ | String: movie name, imdb id, term    |
-| ~api-key~     | String: api-key provided by OMDb     |
-| ~options-map~ | Map: various options can be found on |
-|               | the OMDb site. See example below.    |
-|---------------+--------------------------------------|
+|---------------+------------------------------------------------------------------------|
+| Parameters    | Options                                                                |
+|---------------+------------------------------------------------------------------------|
+| ~search-by~   | String: title, id, term                                                |
+| ~search-term~ | String: movie name, imdb id, term                                      |
+| ~api-key~     | String: api-key provided by OMDb                                       |
+| ~options-map~ | Map: various options can be found on the OMDb site. See example below. |
+|---------------+------------------------------------------------------------------------|
 
 *** Example
     #+BEGIN_SRC clojure
